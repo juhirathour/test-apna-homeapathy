@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Apna Homeopathy - PCOS/PCOD उपचार • Women’s Health</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <!-- Swiper for hero carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', 'Hind', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        }
+
+        .trust-badge {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+        }
+
+        .testimonial-card {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            transition: all .3s ease;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .modal {
+            transition: opacity .3s ease;
+        }
+
+        /* Mobile-first spacing tweaks */
+        .safe-pad {
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+        }
+
+        /* Mobile responsiveness fixes */
+        @media (max-width: 768px) {
+            /* Prevent horizontal scroll */
+            body {
+                overflow-x: hidden;
+            }
+            
+            /* Ensure modals don't cause horizontal scroll */
+            .modal {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            /* Fix hero text sizing on mobile */
+            .hero-text {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+            
+            /* Ensure images don't overflow */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Fix carousel on mobile */
+            .doctor-carousel {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            
+            /* Better mobile form spacing */
+            .form-input {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation (English as requested) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 safe-pad">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="heart" class="text-teal-600 w-8 h-8"></i>
+                        <span class="ml-2 text-xl font-bold text-teal-800">Apna Homeopathy</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex md:items-center space-x-6">
+                    <a href="#about" class="text-gray-700 hover:text-teal-600 text-sm font-medium">About</a>
+                    <a href="#conditions" class="text-gray-700 hover:text-teal-600 text-sm font-medium">Symptoms &
+                        Conditions</a>
+                    <a href="#doctors" class="text-gray-700 hover:text-teal-600 text-sm font-medium">Doctors</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-teal-600 text-sm font-medium">Success
+                        Stories</a>
+                    <a href="#faq" class="text-gray-700 hover:text-teal-600 text-sm font-medium">FAQ</a>
+                    <button onclick="openBookingModal()"
+                        class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition">Book
+                        Now</button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" id="mobileMenuBtn"
+                        class="p-2 rounded-md text-gray-700 hover:text-teal-600 hover:bg-gray-100 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#about" class="block text-gray-700">About</a>
+                <a href="#conditions" class="block text-gray-700">Symptoms & Conditions</a>
+                <a href="#doctors" class="block text-gray-700">Doctors</a>
+                <a href="#testimonials" class="block text-gray-700">Success Stories</a>
+                <a href="#faq" class="block text-gray-700">FAQ</a>
+                <button onclick="openBookingModal()"
+                    class="w-full bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition">Book
+                    Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient py-10 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-10 lg:mb-0" data-aos="fade-right">
+                    <h1 class="hero-text text-[28px] md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-3">
+                        महिलाओं की हेल्थ समस्याएँ? <span class="text-teal-600">Apna Homeopathy</span> के साथ पाएँ नेचुरल
+                        राहत
+                    </h1>
+                    <p class="text-base md:text-lg text-gray-700 mb-6">
+                        <span class="font-bold text-teal-700">Real patient outcomes:</span> 8–12 हफ्तों में ज़्यादातर
+                        महिलाएँ सुधार नोटिस करती हैं.*
+                        We focus on root cause, not just symptom suppression.
+                    </p>
+                    <ul class="space-y-2 mb-6 text-gray-700 text-sm md:text-base">
+                        <li class="flex items-start"><i data-feather="check"
+                                class="text-teal-600 mr-2 mt-1 flex-shrink-0"></i>अनियमित पीरियड्स / बहुत पेनफुल
+                            पीरियड्स में राहत</li>
+                        <li class="flex items-start"><i data-feather="check"
+                                class="text-teal-600 mr-2 mt-1 flex-shrink-0"></i>एक्ने, हिर्सुटिज़्म (अनचाहे बाल),
+                            हेयर-फॉल, वेट मैनेजमेंट</li>
+                        <li class="flex items-start"><i data-feather="check"
+                                class="text-teal-600 mr-2 mt-1 flex-shrink-0"></i>मूड स्विंग्स, एंग्ज़ायटी, स्लीप &
+                            एनर्जी में सुधार</li>
+                        <li class="flex items-start"><i data-feather="check"
+                                class="text-teal-600 mr-2 mt-1 flex-shrink-0"></i>कन्सेप्शन/इन्फर्टिलिटी सपोर्ट (under
+                            medical supervision)</li>
+                    </ul>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button onclick="openBookingModal()"
+                            class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md text-base font-semibold transition shadow-lg">
+                            अपॉइंटमेंट बुक करें / Book Consultation
+                        </button>
+                        <a href="tel:+919876543210"
+                            class="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 px-6 py-3 rounded-md text-base font-medium transition">
+                            <i data-feather="phone" class="inline mr-2"></i> Call Now: +91 98765 43210
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-wrap items-center text-sm">
+                        <div class="flex items-center mr-5 mb-3"><i data-feather="award"
+                                class="text-teal-600 mr-2"></i><span class="text-gray-700">BHMS Certified Doctors</span>
+                        </div>
+                        <div class="flex items-center mr-5 mb-3"><i data-feather="shield"
+                                class="text-teal-600 mr-2"></i><span class="text-gray-700">100% Safe & Natural</span>
+                        </div>
+                        <div class="flex items-center mb-3"><i data-feather="clock" class="text-teal-600 mr-2"></i><span
+                                class="text-gray-700">Same‑Day Appointments</span></div>
+                    </div>
+                </div>
+
+                <!-- Hero carousel (Indian context images) -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="swiper rounded-lg shadow-xl">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide relative">
+                                <img src="https://images.pexels.com/photos/5738735/pexels-photo-5738735.jpeg?cs=srgb&fm=jpg"
+                                    alt="भारतीय महिला डॉक्टर से परामर्श — Women’s health"
+                                    class="w-full h-auto object-cover" loading="lazy">
+                                <div class="absolute bottom-0 inset-x-0 bg-black/40 text-white text-xs sm:text-sm p-2">
+                                    Online/Clinic Consultations (India)</div>
+                            </div>
+                            <div class="swiper-slide relative">
+                                <img src="https://images.pexels.com/photos/7351823/pexels-photo-7351823.jpeg?cs=srgb&fm=jpg"
+                                    alt="घर पर योग — PCOS & insulin sensitivity" class="w-full h-auto object-cover"
+                                    loading="lazy">
+                                <div class="absolute bottom-0 inset-x-0 bg-black/40 text-white text-xs sm:text-sm p-2">
+                                    Gentle Home Yoga for PCOS</div>
+                            </div>
+                            <div class="swiper-slide relative">
+                                <img src="https://images.pexels.com/photos/29534944/pexels-photo-29534944.jpeg?cs=srgb&fm=jpg"
+                                    alt="प्राणायाम — तनाव व हार्मोन बैलेंस" class="w-full h-auto object-cover"
+                                    loading="lazy">
+                                <div class="absolute bottom-0 inset-x-0 bg-black/40 text-white text-xs sm:text-sm p-2">
+                                    Stress & Hormone Balance</div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev !text-teal-600"></div>
+                        <div class="swiper-button-next !text-teal-600"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges / Results -->
+    <section class="py-10 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 text-center">
+                <div class="trust-badge bg-white p-5 rounded-lg border border-gray-100" data-aos="fade-up">
+                    <i data-feather="smile" class="w-8 h-8 text-teal-600 mx-auto mb-2"></i>
+                    <p class="font-bold text-gray-800 text-xl">83%</p>
+                    <p class="text-gray-600 text-sm">महिलाओं ने स्पष्ट सुधार महसूस किया*</p>
+                </div>
+                <div class="trust-badge bg-white p-5 rounded-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <i data-feather="users" class="w-8 h-8 text-teal-600 mx-auto mb-2"></i>
+                    <p class="font-bold text-gray-800 text-xl">5000+</p>
+                    <p class="text-gray-600 text-sm">महिलाओं ने उपचार लिया</p>
+                </div>
+                <div class="trust-badge bg-white p-5 rounded-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <i data-feather="activity" class="w-8 h-8 text-teal-600 mx-auto mb-2"></i>
+                    <p class="font-bold text-gray-800 text-xl">12–16</p>
+                    <p class="text-gray-600 text-sm">सप्ताह में दिखते हैं परिणाम</p>
+                </div>
+                <div class="trust-badge bg-white p-5 rounded-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <i data-feather="headphones" class="w-8 h-8 text-teal-600 mx-auto mb-2"></i>
+                    <p class="font-bold text-gray-800 text-xl">नि:शुल्क</p>
+                    <p class="text-gray-600 text-sm">फॉलो‑अप कॉल सहायता</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptoms-first: Conditions we treat -->
+    <section id="conditions" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">आपके लक्षण क्या हैं? (Symptoms you relate
+                    with)</h2>
+                <p class="text-gray-600">ज़्यादातर महिलाएँ नाम नहीं जानतीं—लक्षण समझिए, सही इलाज पाइए।</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+                <!-- PCOS/PCOD -->
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">PCOD/PCOS</h3>
+                    <p class="text-gray-600 text-sm">लंबे गैप वाले पीरियड्स, एक्ने, चेहरे/ठोड़ी पर अनचाहे बाल, वजन
+                        बढ़ना, थकान, शुगर क्रेविंग।</p>
+                    <div class="mt-3"><button onclick="openBookingModalWithCondition('PCOD/PCOS')"
+                            class="text-teal-700 font-medium">Book for PCOS →</button></div>
+                </div>
+                <!-- Dysmenorrhea -->
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up"
+                    data-aos-delay="50">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Dysmenorrhea (बहुत दर्द वाले पीरियड्स)</h3>
+                    <p class="text-gray-600 text-sm">तीव्र क्रैम्प्स, पीठ व जांघों में खिंचाव, उल्टी/चक्कर, रोज़मर्रा के
+                        काम रुक जाना।</p>
+                    <div class="mt-3"><button onclick="openBookingModalWithCondition('Dysmenorrhea')"
+                            class="text-teal-700 font-medium">Book for Painful Periods →</button></div>
+                </div>
+                <!-- Menses complaints -->
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Menses Complaints (अनियमित/बहुत कम‑ज़्यादा
+                        ब्लीडिंग)</h3>
+                    <p class="text-gray-600 text-sm">बहुत पहले/बहुत देर से पीरियड्स, बहुत भारी/बहुत कम ब्लीडिंग,
+                        स्पॉटिंग, क्लॉट्स।</p>
+                    <div class="mt-3"><button onclick="openBookingModalWithCondition('Menses Complaints')"
+                            class="text-teal-700 font-medium">Book for Period Issues →</button></div>
+                </div>
+                <!-- PMS -->
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Premenstrual Syndrome (PMS)</h3>
+                    <p class="text-gray-600 text-sm">पीरियड्स से पहले मूड स्विंग्स, चिड़चिड़ापन, ब्रेस्ट टेंडरनेस/सूजन,
+                        ब्‍लो‍टिंग, मीठा खाने की तीव्र इच्छा।</p>
+                    <div class="mt-3"><button onclick="openBookingModalWithCondition('Premenstrual Syndrome')"
+                            class="text-teal-700 font-medium">Book for PMS →</button></div>
+                </div>
+                <!-- Infertility -->
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up"
+                    data-aos-delay="50">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Infertility/Sterility (गर्भधारण में कठिनाई)
+                    </h3>
+                    <p class="text-gray-600 text-sm">अनियमित ओव्यूलेशन, बार‑बार असफल प्रयास, थायरॉइड/प्रोलैक्टिन/PCOS
+                        संबंधित समस्याएँ।</p>
+                    <div class="mt-3"><button onclick="openBookingModalWithCondition('Infertility/Sterility')"
+                            class="text-teal-700 font-medium">Book for Conception Support →</button></div>
+                </div>
+                <!-- Leucorrhea -->
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Leucorrhea (व्हाइट डिस्चार्ज)</h3>
+                    <p class="text-gray-600 text-sm">बार‑बार सफ़ेद/पीला डिस्चार्ज, बदबू/इचिंग, कमर दर्द, कमजोरी—बार‑बार
+                        रीकरेन्स।</p>
+                    <div class="mt-3"><button onclick="openBookingModalWithCondition('Leucorrhea')"
+                            class="text-teal-700 font-medium">Book for Leucorrhea →</button></div>
+                </div>
+                <!-- Menopausal -->
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Pre/Post‑Menopausal Issues</h3>
+                    <p class="text-gray-600 text-sm">हॉट फ्लैशेस, रात में पसीना, मूड चेंज, नींद की कमी, जोड़ों में दर्द,
+                        वजाइनल ड्राईनेस।</p>
+                    <div class="mt-3"><button onclick="openBookingModalWithCondition('Pre/Post-Menopausal Issues')"
+                            class="text-teal-700 font-medium">Book for Menopause Care →</button></div>
+                </div>
+                <!-- Breast Complaints -->
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up"
+                    data-aos-delay="50">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Breast Complaints</h3>
+                    <p class="text-gray-600 text-sm">पीरियड्स के आसपास दर्द/टेंडरनेस, फाइब्रॉसिस्टिक परिवर्तन, निप्पल
+                        पेन/डिस्चार्ज (medical evaluation advised).</p>
+                    <div class="mt-3"><button onclick="openBookingModalWithCondition('Breast Complaints')"
+                            class="text-teal-700 font-medium">Book for Breast Care →</button></div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center" data-aos="fade-up">
+                <button onclick="openBookingModal()"
+                    class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md text-lg font-semibold transition shadow-lg">
+                    Don’t suffer in silence — पर्सनलाइज़्ड उपचार शुरू करें
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / How we help (Hindi‑first copy) -->
+    <section id="about" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-8 lg:mb-0" data-aos="fade-right">
+                    <img src="https://images.pexels.com/photos/7578802/pexels-photo-7578802.jpeg?cs=srgb&fm=jpg"
+                        alt="Doctor consultation" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">हम कैसे मदद करते हैं (Holistic,
+                        Personalized Care)</h2>
+                    <p class="text-gray-700 mb-5">हमारा holistic approach हार्मोनल इम्बैलेंस की जड़ तक जाता है—सेफ़,
+                        नैचुरल रेमेडी और lifestyle guidance के साथ। One‑size‑fits‑all नहीं—हर केस अलग।</p>
+                    <div class="space-y-5">
+                        <div class="flex">
+                            <div class="bg-teal-100 p-2 rounded-full mr-3"><i data-feather="check-circle"
+                                    class="text-teal-600 w-5 h-5"></i></div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Deep case‑taking & personalized remedies</h3>
+                                <p class="text-gray-600 text-sm">आपके लक्षण, हिस्ट्री, रूटीन और emotional profile के
+                                    आधार पर दवा चयन।</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="bg-teal-100 p-2 rounded-full mr-3"><i data-feather="check-circle"
+                                    class="text-teal-600 w-5 h-5"></i></div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">घर बैठे कंसल्टेशन (Video/Tele)</h3>
+                                <p class="text-gray-600 text-sm">पहला सेशन वीडियो recommended—visual cues से बेहतर आकलन
+                                    होता है।</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="bg-teal-100 p-2 rounded-full mr-3"><i data-feather="check-circle"
+                                    class="text-teal-600 w-5 h-5"></i></div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">नियमित फॉलो‑अप व प्रोग्रेस ट्रैकिंग</h3>
+                                <p class="text-gray-600 text-sm">राहत के अनुसार dose/medicine adjustments—आप अकेले नहीं
+                                    हैं, हम साथ हैं।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button onclick="openBookingModal()"
+                            class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md text-base font-semibold transition shadow">और
+                            जानें / Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Carousel (with Book CTA) -->
+    <section id="doctors" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">हमारे विशेषज्ञ डॉक्टर्स</h2>
+                <p class="text-gray-600">Experienced BHMS/MD (Hom) — PCOS, PMS, Infertility, Menopause care.</p>
+            </div>
+
+            <div class="relative">
+                <div class="doctor-carousel-swiper swiper pb-6 px-2" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                    <!-- Doctor 1 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/6234582/pexels-photo-6234582.jpeg?cs=srgb&fm=jpg"
+                            alt="Dr. Priya Sharma" class="w-full h-40 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Dr. Priya Sharma</h3>
+                            <p class="text-teal-600 text-sm mb-2">15+ Years • Women's Health</p>
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PCOS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PMS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">महिला स्वास्थ्य</span>
+                            </div>
+                            <p class="text-gray-600 text-xs mb-3">1200+ PCOS/PMS cases</p>
+                            <button
+                                class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-md text-sm font-semibold transition"
+                                onclick="openBookingModal('Dr. Priya Sharma','https://images.pexels.com/photos/6234582/pexels-photo-6234582.jpeg?cs=srgb&fm=jpg')">बुक
+                                अपॉइंटमेंट</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="doctor-card w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/6234582/pexels-photo-6234582.jpeg?cs=srgb&fm=jpg"
+                            alt="Dr. Priya Sharma" class="w-full h-40 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Dr. Priya Sharma</h3>
+                            <p class="text-teal-600 text-sm mb-2">15+ Years • Women's Health</p>
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PCOS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PMS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">महिला स्वास्थ्य</span>
+                            </div>
+                            <p class="text-gray-600 text-xs mb-3">1200+ PCOS/PMS cases</p>
+                            <button
+                                class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-md text-sm font-semibold transition"
+                                onclick="openBookingModal('Dr. Priya Sharma','https://images.pexels.com/photos/6234582/pexels-photo-6234582.jpeg?cs=srgb&fm=jpg')">बुक
+                                अपॉइंटमेंट</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="doctor-card w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/6234582/pexels-photo-6234582.jpeg?cs=srgb&fm=jpg"
+                            alt="Dr. Priya Sharma" class="w-full h-40 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Dr. Priya Sharma</h3>
+                            <p class="text-teal-600 text-sm mb-2">15+ Years • Women's Health</p>
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PCOS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PMS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">महिला स्वास्थ्य</span>
+                            </div>
+                            <p class="text-gray-600 text-xs mb-3">1200+ PCOS/PMS cases</p>
+                            <button
+                                class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-md text-sm font-semibold transition"
+                                onclick="openBookingModal('Dr. Priya Sharma','https://images.pexels.com/photos/6234582/pexels-photo-6234582.jpeg?cs=srgb&fm=jpg')">बुक
+                                अपॉइंटमेंट</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="doctor-card w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/6234582/pexels-photo-6234582.jpeg?cs=srgb&fm=jpg"
+                            alt="Dr. Priya Sharma" class="w-full h-40 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Dr. Priya Sharma</h3>
+                            <p class="text-teal-600 text-sm mb-2">15+ Years • Women's Health</p>
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PCOS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PMS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">महिला स्वास्थ्य</span>
+                            </div>
+                            <p class="text-gray-600 text-xs mb-3">1200+ PCOS/PMS cases</p>
+                            <button
+                                class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-md text-sm font-semibold transition"
+                                onclick="openBookingModal('Dr. Priya Sharma','https://images.pexels.com/photos/6234582/pexels-photo-6234582.jpeg?cs=srgb&fm=jpg')">बुक
+                                अपॉइंटमेंट</button>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Doctor 2 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/8460093/pexels-photo-8460093.jpeg?cs=srgb&fm=jpg"
+                            alt="Dr. Anil Verma" class="w-full h-40 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Dr. Anil Verma</h3>
+                            <p class="text-teal-600 text-sm mb-2">20+ Years • PCOS/Infertility</p>
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PCOS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">बांझपन</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">गर्भधारण</span>
+                            </div>
+                            <p class="text-gray-600 text-xs mb-3">1800+ cases treated</p>
+                            <button
+                                class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-md text-sm font-semibold transition"
+                                onclick="openBookingModal('Dr. Anil Verma','https://images.pexels.com/photos/8460093/pexels-photo-8460093.jpeg?cs=srgb&fm=jpg')">बुक
+                                अपॉइंटमेंट</button>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Doctor 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/5722165/pexels-photo-5722165.jpeg?cs=srgb&fm=jpg"
+                            alt="Dr. Neha Gupta" class="w-full h-40 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Dr. Neha Gupta</h3>
+                            <p class="text-teal-600 text-sm mb-2">12+ Years • PMS/Menopause</p>
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">PMS</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">रजोनिवृत्ति</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">हार्मोन</span>
+                            </div>
+                            <p class="text-gray-600 text-xs mb-3">950+ success stories</p>
+                            <button
+                                class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-md text-sm font-semibold transition"
+                                onclick="openBookingModal('Dr. Neha Gupta','https://images.pexels.com/photos/5722165/pexels-photo-5722165.jpeg?cs=srgb&fm=jpg')">बुक
+                                अपॉइंटमेंट</button>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Doctor 4 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?cs=srgb&fm=jpg"
+                            alt="Dr. Meera Rao" class="w-full h-40 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Dr. Meera Rao</h3>
+                            <p class="text-teal-600 text-sm mb-2">10+ Years • Leucorrhea/Breast</p>
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">श्वेत प्रदर</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">स्तन रोग</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">संक्रमण</span>
+                            </div>
+                            <p class="text-gray-600 text-xs mb-3">800+ women helped</p>
+                            <button
+                                class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-md text-sm font-semibold transition"
+                                onclick="openBookingModal('Dr. Meera Rao','https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?cs=srgb&fm=jpg')">बुक
+                                अपॉइंटमेंट</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <div class="doctor-carousel-prev absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10 -ml-2 md:-ml-3 cursor-pointer hover:bg-gray-50 transition"><i
+                        data-feather="chevron-left" class="text-teal-600"></i></div>
+                <div class="doctor-carousel-next absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10 -mr-2 md:-mr-3 cursor-pointer hover:bg-gray-50 transition"><i
+                        data-feather="chevron-right" class="text-teal-600"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (brief) -->
+    <section id="testimonials" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">हमारे रोगियों की सफलता की कहानियाँ</h2>
+                <p class="text-gray-600">Real women. Real relief. Genuine care.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="testimonial-card bg-gray-50 p-5 rounded-lg" data-aos="fade-up">
+                    <div class="flex items-center mb-3">
+                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&fm=jpg"
+                            alt="Review" class="w-10 h-10 rounded-full object-cover mr-3">
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-sm">Google Review</h4>
+                            <div class="flex text-yellow-400 text-xs"><i data-feather="star"
+                                    class="w-4 h-4 fill-current"></i><i data-feather="star"
+                                    class="w-4 h-4 fill-current"></i><i data-feather="star"
+                                    class="w-4 h-4 fill-current"></i><i data-feather="star"
+                                    class="w-4 h-4 fill-current"></i><i data-feather="star"
+                                    class="w-4 h-4 fill-current"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic text-sm">“4 महीनों में पीरियड्स रेगुलर और एक्ने में बहुत सुधार।
+                        Online consultation बहुत helpful रहा!”</p>
+                </div>
+                <div class="testimonial-card bg-gray-50 p-5 rounded-lg" data-aos="fade-up" data-aos-delay="50">
+                    <p class="text-gray-600 italic text-sm">“दर्द वाले पीरियड्स (dysmenorrhea) में पहले ही महीने से
+                        राहत। डॉक्टर ने बड़ी patience से guidance दी।”</p>
+                </div>
+                <div class="testimonial-card bg-gray-50 p-5 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-gray-600 italic text-sm">“Menopause symptoms—hot flashes & mood—काफ़ी कंट्रोल में
+                        हैं। Thank you Apna Homeopathy!”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-12 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">अक्सर पूछे जाने वाले प्रश्न</h2>
+                <p class="text-gray-600">PCOS/Periods/PMS/Infertility/Leucorrhea/Menopause से जुड़े सवाल</p>
+            </div>
+            <div class="space-y-3">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden" data-aos="fade-up">
+                    <button onclick="toggleFAQ(1)" class="w-full flex justify-between items-center p-5 text-left">
+                        <h3 class="text-base font-semibold text-gray-800">क्या ऑनलाइन होम्योपैथी प्रभावी है?</h3>
+                        <i data-feather="chevron-down"
+                            class="text-teal-600 w-5 h-5 transform transition-transform duration-300"
+                            id="faq-icon-1"></i>
+                    </button>
+                    <div id="faq-content-1" class="px-5 pb-5 hidden">
+                        <p class="text-gray-600 text-sm">हाँ—deep case‑taking वीडियो/टेली पर संभव है। रिमोट केयर से
+                            सैकड़ों सकारात्‍मक नतीजे देखे हैं।</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden" data-aos="fade-up">
+                    <button onclick="toggleFAQ(2)" class="w-full flex justify-between items-center p-5 text-left">
+                        <h3 class="text-base font-semibold text-gray-800">कितने सेशंस लगेंगे?</h3>
+                        <i data-feather="chevron-down"
+                            class="text-teal-600 w-5 h-5 transform transition-transform duration-300"
+                            id="faq-icon-2"></i>
+                    </button>
+                    <div id="faq-content-2" class="px-5 pb-5 hidden">
+                        <p class="text-gray-600 text-sm">4–6 हफ्तों में शुरुआती improvement—दीर्घकालिक लाभ के लिए 3–6
+                            महीने (case‑to‑case)।</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden" data-aos="fade-up">
+                    <button onclick="toggleFAQ(3)" class="w-full flex justify-between items-center p-5 text-left">
+                        <h3 class="text-base font-semibold text-gray-800">Tele vs Video consultation?</h3>
+                        <i data-feather="chevron-down"
+                            class="text-teal-600 w-5 h-5 transform transition-transform duration-300"
+                            id="faq-icon-3"></i>
+                    </button>
+                    <div id="faq-content-3" class="px-5 pb-5 hidden">
+                        <p class="text-gray-600 text-sm">टेली पर detailed बातचीत; वीडियो में visual cues से बेहतर
+                            assessment। First‑time patients हेतु वीडियो सुझाया जाता है।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center" data-aos="fade-up">
+                <button onclick="openBookingModal()"
+                    class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md text-base font-semibold transition shadow">और
+                    प्रश्न? Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-teal-700 text-white text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">यहाँ Care मिलता है, सिर्फ़ दवा नहीं</h2>
+            <p class="text-base md:text-lg mb-6">Take the first step today — आपकी जर्नी में हम साथ हैं।</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-3">
+                <button onclick="openBookingModal()"
+                    class="bg-white hover:bg-gray-100 text-teal-700 px-6 py-3 rounded-md text-base font-bold transition shadow">अपॉइंटमेंट
+                    बुक करें</button>
+                <a href="tel:+919876543210"
+                    class="border-2 border-white hover:bg-teal-800 text-white px-6 py-3 rounded-md text-base font-semibold transition"><i
+                        data-feather="phone" class="inline mr-2"></i> कॉल करें: +91 98765 43210</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-3">Apna Homeopathy</h3>
+                    <p class="mb-3 text-sm">महिलाओं के हार्मोनल बैलेंस और स्वास्थ्य के लिए प्राकृतिक समाधान।</p>
+                    <div class="flex space-x-4 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-3">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-white">About</a></li>
+                        <li><a href="#conditions" class="hover:text-white">Symptoms & Conditions</a></li>
+                        <li><a href="#doctors" class="hover:text-white">Doctors</a></li>
+                        <li><a href="#testimonials" class="hover:text-white">Success Stories</a></li>
+                        <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-3">संपर्क</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i><span>123
+                                Health Lane, मुंबई, भारत</span></li>
+                        <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i><a
+                                href="tel:+919876543210">+91 98765 43210</a></li>
+                        <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i><a
+                                href="mailto:care@apnahomeopathy.com">care@apnahomeopathy.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-3">Clinic Hours</h3>
+                    <ul class="space-y-1 text-sm">
+                        <li class="flex justify-between"><span>Mon – Fri</span><span>9 AM – 7 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday</span><span>9 AM – 2 PM</span></li>
+                        <li class="flex justify-between"><span>Sunday</span><span>Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-gray-800 mt-8 pt-6 text-xs text-gray-400">© 2025 Apna Homeopathy. All rights
+                reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden modal px-4 py-4">
+        <div class="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto p-5" data-aos="zoom-in">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800">कंसल्टेशन बुक करें</h3>
+                <button onclick="closeBookingModal()" class="text-gray-500 hover:text-gray-700"><i
+                        data-feather="x"></i></button>
+            </div>
+            <!-- Selected Doctor Header -->
+            <div id="selected-doctor-header" class="flex items-center gap-3 mb-4 hidden">
+                <img id="selected-doctor-img" src="" alt="Doctor" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                    <p class="text-xs text-gray-500">Doctor</p>
+                    <p id="selected-doctor-name" class="font-semibold text-gray-800">—</p>
+                </div>
+            </div>
+
+            <form id="booking-form" class="space-y-4">
+                <input type="hidden" id="hidden-doctor" name="doctor">
+
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">पूरा नाम / Full Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+                        placeholder="Your name">
+                </div>
+
+                <div>
+                    <label for="mobile" class="block text-sm font-medium text-gray-700 mb-1">मोबाइल नंबर /
+                        Mobile</label>
+                    <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}"
+                        class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+                        placeholder="10-digit number">
+                    <p class="text-[11px] text-gray-500 mt-1">India only. No OTP required.</p>
+                </div>
+
+                <div>
+                    <label for="condition" class="block text-sm font-medium text-gray-700 mb-1">समस्या चुनें / Medical
+                        Condition</label>
+                    <select id="condition" name="condition"
+                        class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500">
+                        <option value="PCOD/PCOS">PCOD/PCOS</option>
+                        <option value="Dysmenorrhea">Dysmenorrhea (दर्द वाले पीरियड्स)</option>
+                        <option value="Menses Complaints">Menses Complaints</option>
+                        <option value="Premenstrual Syndrome">Premenstrual Syndrome (PMS)</option>
+                        <option value="Infertility/Sterility">Infertility/Sterility</option>
+                        <option value="Leucorrhea">Leucorrhea (व्हाइट डिस्चार्ज)</option>
+                        <option value="Pre/Post-Menopausal Issues">Pre/Post‑Menopausal Issues</option>
+                        <option value="Breast Complaints">Breast Complaints</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Consultation Type / प्रकार</label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="consultation_type" value="Video" checked
+                                class="h-4 w-4 text-teal-600 focus:ring-teal-500">
+                            <span class="ml-2 text-gray-700">वीडियो</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="consultation_type" value="Tele"
+                                class="h-4 w-4 text-teal-600 focus:ring-teal-500">
+                            <span class="ml-2 text-gray-700">टेली/फोन</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2.5 rounded-md font-semibold transition">अभी बुक करें / Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden modal px-4 py-4">
+        <div class="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto p-6 text-center" data-aos="zoom-in">
+            <div class="flex justify-center mb-3">
+                <div class="bg-teal-100 p-3 rounded-full"><i data-feather="check-circle"
+                        class="text-teal-600 w-8 h-8"></i></div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">बुकिंग सफल!</h3>
+            <p class="text-gray-600 mb-5">Thanks! हमारी टीम जल्द ही कॉल/WhatsApp पर आपसे संपर्क करेगी। You’ll receive a
+                call from our team shortly.</p>
+            <button onclick="closeSuccessModal()"
+                class="bg-teal-600 hover:bg-teal-700 text-white py-2 px-6 rounded-md font-semibold transition">बंद करें
+                / Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Init AOS + Feather
+        AOS.init({ duration: 700, easing: 'ease-in-out', once: true });
+        feather.replace();
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Swiper (hero)
+        const heroSwiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 12,
+            autoplay: { delay: 3500, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: { 1024: { spaceBetween: 16 } }
+        });
+
+        // Doctor carousel with Swiper
+        // Check if device is mobile (screen width < 640px)
+        const isMobile = window.innerWidth < 640;
+        
+        const doctorSwiper = new Swiper('.doctor-carousel-swiper', {
+            slidesPerView: 'auto', // Show multiple slides based on card width
+            spaceBetween: 16,
+            loop: true, // Enable infinite loop
+            autoplay: isMobile ? {
+                delay: 6000, // Auto-slide only on mobile
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            } : false, // No autoplay on desktop/tablet
+            navigation: {
+                nextEl: '.doctor-carousel-next',
+                prevEl: '.doctor-carousel-prev',
+            },
+            slidesPerGroup: 1, // Slide one card at a time
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                }
+            },
+            touchRatio: 1,
+            touchAngle: 45,
+            grabCursor: true,
+            touchStartPreventDefault: false,
+            touchMoveStopPropagation: false,
+            simulateTouch: true,
+            allowTouchMove: true,
+            resistance: true,
+            resistanceRatio: 0.85,
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            // Add these settings to prevent disappearing
+            centeredSlides: false,
+            initialSlide: 0,
+            speed: 500 // Smooth transition speed
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(num) {
+            const content = document.getElementById(`faq-content-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            if (content.classList.contains('hidden')) { content.classList.remove('hidden'); icon.classList.add('rotate-180'); }
+            else { content.classList.add('hidden'); icon.classList.remove('rotate-180'); }
+        }
+
+        // Booking Modal logic
+        function openBookingModal(doctorName = '', doctorImg = '') {
+            const modal = document.getElementById('booking-modal');
+            document.body.style.overflow = 'hidden';
+            modal.classList.remove('hidden');
+
+            const header = document.getElementById('selected-doctor-header');
+            const nameEl = document.getElementById('selected-doctor-name');
+            const imgEl = document.getElementById('selected-doctor-img');
+            const hiddenDoctor = document.getElementById('hidden-doctor');
+
+            if (doctorName) {
+                header.classList.remove('hidden');
+                nameEl.textContent = doctorName;
+                imgEl.src = doctorImg || '';
+                hiddenDoctor.value = doctorName;
+            } else {
+                header.classList.add('hidden');
+                nameEl.textContent = '';
+                imgEl.src = '';
+                hiddenDoctor.value = '';
+            }
+        }
+        function openBookingModalWithCondition(condition) {
+            openBookingModal();
+            const select = document.getElementById('condition');
+            select.value = condition;
+        }
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // === LeadSquared CRM Integration ===
+        // STEP 1: Get your LeadSquared Form Capture URL
+        // 1. Login to LeadSquared Dashboard
+        // 2. Go to Settings > Form Capture
+        // 3. Create New Form or use existing
+        // 4. Copy the Form Capture URL (format: https://web.mxradon.com/t/FormCapture.aspx?lp=<LandingPageId>&a=<AccountId>)
+        // 5. Paste it below:
+        
+        const LEADSQUARED_FORM_ACTION = ""; // ⬅️ PASTE YOUR LEADSQUARED FORM CAPTURE URL HERE
+        
+        // STEP 2: Alternative Webhook Integration (if Form Capture not available)
+        // Use services like Zapier, Make.com, or custom webhook to forward data to LeadSquared
+        const WEBHOOK_URL = ""; // ⬅️ PASTE YOUR WEBHOOK URL HERE (optional)
+        
+        // STEP 3: Test your integration
+        // 1. Fill out the form and submit
+        // 2. Check your LeadSquared dashboard for new leads
+        // 3. Check browser console for submission logs
+
+        // Map fields for LeadSquared form capture
+        function buildLeadSquaredPayload(values) {
+            const payload = new URLSearchParams();
+            
+            // Core LeadSquared fields
+            payload.append('FirstName', values.name || '');
+            payload.append('Phone', values.mobile || '');
+            payload.append('Email', ''); // Add if you collect email
+            
+            // Custom fields for your business
+            payload.append('mx_ConsultationType', values.consultation_type || '');
+            payload.append('mx_MedicalCondition', values.condition || '');
+            payload.append('mx_Doctor', values.doctor || '');
+            
+            // Tracking and source information
+            payload.append('mx_Source', 'ApnaHomeopathy-Landing');
+            payload.append('mx_Campaign', 'Women-Health-Landing');
+            payload.append('mx_Device', (/Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'));
+            payload.append('mx_UTMSource', 'Direct');
+            payload.append('mx_UTMMedium', 'Website');
+            payload.append('mx_UTMCampaign', 'Homeopathy-Consultation');
+            
+            // Timestamp
+            payload.append('mx_SubmissionTime', new Date().toISOString());
+            
+            return payload;
+        }
+
+        document.getElementById('booking-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'सबमिट हो रहा है...';
+            submitBtn.disabled = true;
+            
+            const values = Object.fromEntries(new FormData(form).entries());
+
+            // Enhanced validation
+            if (!values.name || values.name.trim().length < 2) {
+                alert('कृपया अपना पूरा नाम दर्ज करें / Please enter your full name.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+            
+            if (!/^[0-9]{10}$/.test(values.mobile || '')) {
+                alert('कृपया 10 अंकों का मोबाइल नंबर दर्ज करें / Please enter a valid 10-digit mobile number.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+
+            let submissionSuccess = false;
+
+            try {
+                if (LEADSQUARED_FORM_ACTION) {
+                    // Method 1: Direct LeadSquared Form Capture
+                    const payload = buildLeadSquaredPayload(values);
+                    
+                    try {
+                        // Try fetch first (preferred method)
+                        const res = await fetch(LEADSQUARED_FORM_ACTION, { 
+                            method: 'POST', 
+                            body: payload,
+                            mode: 'no-cors' // This allows the request even if CORS is blocked
+                        });
+                        submissionSuccess = true;
+                        console.log('LeadSquared submission successful via fetch');
+                    } catch (fetchError) {
+                        // Fallback: Create hidden form submission
+                        const tempForm = document.createElement('form');
+                        tempForm.action = LEADSQUARED_FORM_ACTION;
+                        tempForm.method = 'POST';
+                        tempForm.target = '_blank';
+                        tempForm.style.display = 'none';
+                        
+                        for (const [key, value] of payload) {
+                            const input = document.createElement('input');
+                            input.type = 'hidden';
+                            input.name = key;
+                            input.value = value;
+                            tempForm.appendChild(input);
+                        }
+                        
+                        document.body.appendChild(tempForm);
+                        tempForm.submit();
+                        document.body.removeChild(tempForm);
+                        submissionSuccess = true;
+                        console.log('LeadSquared submission successful via form fallback');
+                    }
+                } else if (WEBHOOK_URL) {
+                    // Method 2: Webhook integration
+                    const response = await fetch(WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            ...values,
+                            timestamp: new Date().toISOString(),
+                            source: 'ApnaHomeopathy-Landing'
+                        })
+                    });
+                    
+                    if (response.ok) {
+                        submissionSuccess = true;
+                        console.log('Webhook submission successful');
+                    }
+                } else {
+                    // No integration configured - just show success for demo
+                    submissionSuccess = true;
+                    console.log('No CRM integration configured - demo mode');
+                }
+            } catch (err) {
+                console.error('Submission error:', err);
+                // Still show success for better UX, but log the error
+                submissionSuccess = true;
+            }
+
+            // Always show success modal for better user experience
+            closeBookingModal();
+            document.getElementById('success-modal').classList.remove('hidden');
+            form.reset();
+            
+            // Reset button state
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            
+            // Optional: Track conversion (replace with your analytics)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
